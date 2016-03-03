@@ -11,4 +11,4 @@ Sam and Paul do not know the values given to the other.
 3. Paul replies, “Oh, now I know the integers.” 
 4. Sam replies back, “Now I know too.”
 
-Given that both of them are telling the truth, what are the two integers.
+Given that both of them are telling the truth, what are the two integers?
