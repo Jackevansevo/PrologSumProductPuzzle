@@ -1,42 +1,3 @@
-/*
-je387
-THIS WORK IS ENTIRELY MY OWN.
-The program does does not produce multiple answers.
-I have have not used built-ins.
-
-1. s1(Q, 100): 1747
-
-- Creates a list [2,3,4,...,100]
-- Maps two copies of the list together e.g.
-    loops through 1st list [1,2,3,4,...1000]
-    compares each head with tail of 2nd list
-    2 -> [3,4,5,...,100]
-- Then creates a list of quadruple pairs from these combinations where 1 < X < Y nad X + Y <= N
-- Sorts by the product
-- Removes duplicate products
-
-2. s2(Q, 100): 145
-
-- Finds all the sums corresponding to unique products, places them in a list
-- Sorts the sums and removes duplicates
-- Removes occurances of any of these sums from the result in S1
-
-3. s3(Q, 100): 86
-
-- Sorts quadruples by products
-- Scans through list, only keeping unique produts (removing duplicates)
-
-4.
-
-- Sorts quadruples by sum
-- Scans through list, only keeping unique sums (removing duplicates)
-
-5. s4(Q, 100): 1
-s4(Q,500) uses % 217,793 inferences
-*/
-
-
-
 %                           ---UTILITY FUNCTIONS---
 % ------------------------------------------------------------------------------
 
@@ -339,21 +300,3 @@ s4(Q, N) :-
 % when the constraint on the sum is changed into X + Y
 s5(Q, N) :-
     s4(Q, N), !.
-
-
-/*------------------------------------------------------------------------------
-*
-* UNABLE TO FIT IN FULL LIST
-*
-?- consult(test).
-true.
-
-?- time(s1(Q, 100)).
-% 92,644 inferences, 0.086 CPU in 0.086 seconds (100% CPU, 1071526 Lips)
-Q = [[2, 6, 8, 12], [3, 4, 7, 12], [2, 9, 11, 18], [3, 6, 9, 18], [2, 10, 12, 20], [4, 5, 9|...], [3, 8|...], [2|...], [...|...]|...].
-
-?- time(s2(Q, 100)).
-% 212,891 inferences, 0.137 CPU in 0.137 seconds (100% CPU, 1556684 Lips)
-Q = [[2, 9, 11, 18], [3, 8, 11, 24], [4, 7, 11, 28], [2, 15, 17, 30], [5, 6, 11, 30], [2, 21, 23|...], [3, 14|...], [2|...], [...|...]|...].
-
-*/
